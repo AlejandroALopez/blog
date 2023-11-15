@@ -1,7 +1,19 @@
 <div>
-  <p>All Posts</p>
-</div>
-<div class="content">
-  <h3>Latest Posts</h3>
-  <posts-component></posts-component>
+  <div class="filters-container">
+    <div class="search">
+      <input class="search-bar" placeholder="Search post"/>
+    </div>
+    <div class="tags">
+      <p>By Tag:</p>
+      <div class="tags-container">
+        <button *ngFor="let tag of tags" class="tag">
+          <p>{{ tag }}</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <h3>Latest Posts</h3>
+    <posts-component></posts-component>
+  </div>
 </div>

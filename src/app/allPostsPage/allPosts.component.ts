@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { tags } from "../../data/tags";
 
 @Component({
     selector: 'all-posts-page',
@@ -6,5 +7,6 @@ import { Component } from "@angular/core";
     styleUrls: ['./allPosts.component.css']
 })
 export class AllPostsComponent {
-
+    tags: string[] = tags;
+    activeTag: string = "";
 }

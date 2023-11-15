@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { PostsComponent } from './posts/posts.component';
 import { FooterComponent } from './footer/footer.component';
-import { PostItemComponent } from './postItem/postItem.component';
-import { AllPostsComponent } from './allPostsPage/allPosts.component';
+import { PostItemComponent } from './posts/postItem/postItem.component';
+import { AllPostsComponent } from './AllPostsPage/allPosts.component';
 import { HomeComponent } from './homePage/home.component';
+import { SinglePostComponent } from './SinglePostPage/singlePost.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     HomeComponent,
     AllPostsComponent,
+    SinglePostComponent,
     PostsComponent,
     PostItemComponent,
     FooterComponent,

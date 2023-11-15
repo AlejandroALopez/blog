@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { PostShort } from "../../types/post-types";
+import { PostShort } from "../../../types/post-types";
 
 @Component({
     selector: 'post-item-module',
