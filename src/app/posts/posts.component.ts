@@ -3,7 +3,7 @@ import { PostShort } from "../../types/post-types";
 import { POSTS_DATA } from "../../data/test-posts";
 
 @Component({
-    selector: 'posts-module',
+    selector: 'posts-component',
     templateUrl: './posts.component.html',
     styleUrls: ['./posts.component.css']
 })
