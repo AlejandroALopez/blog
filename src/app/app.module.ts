@@ -15,6 +15,7 @@ import { SinglePostComponent } from './SinglePostPage/singlePost.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'posts', component: AllPostsComponent },
+  { path: 'posts/:postId', component: SinglePostComponent },
 ];
 
 @NgModule({
