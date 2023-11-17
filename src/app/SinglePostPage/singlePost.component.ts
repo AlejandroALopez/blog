@@ -1,24 +1,37 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PostShort } from "../../types/post-types";
-import { POSTS_DATA } from "../../data/test-posts";
+import { Post } from '../../types/post-types';
+import { PostService } from '../post.service';
 
 @Component({
-    selector: 'single-post-component',
-    templateUrl: './singlePost.component.html',
-    styleUrls: ['./singlePost.component.css']
+  selector: 'single-post-component',
+  templateUrl: './singlePost.component.html',
+  styleUrls: ['./singlePost.component.css'],
 })
 export class SinglePostComponent implements OnInit {
-    constructor(private route: ActivatedRoute) { }
+  post: Post | undefined;
 
-    post: PostShort | undefined;
+  constructor(
+    private route: ActivatedRoute,
+    private postService: PostService
+  ) {}
 
-    ngOnInit() {
-        // First get the product id from the current route.
-        const routeParams = this.route.snapshot.paramMap;
-        const postIdFromRoute = String(routeParams.get('postId'));
-      
-        // Find the product that correspond with the id provided in route.
-        this.post = POSTS_DATA.find(post => post.id === postIdFromRoute);
-      }
+  ngOnInit(): void {
+    this.getPost();
+  }
+
+  getPost(): void {
+    const postId = this.route.snapshot.paramMap.get('postId');
+    console.log("id got: ", postId);
+    if (postId) {
+      this.postService.getPostById(postId).subscribe(
+        (post) => {
+          this.post = post;
+        },
+        (error) => {
+          console.error('Error fetching post: ', error);
+        }
+      );
+    }
+  }
 }
