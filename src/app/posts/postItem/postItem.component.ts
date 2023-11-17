@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { PostShort } from "../../../types/post-types";
+import { Post } from "../../../types/post-types";
 
 @Component({
     selector: 'post-item-module',
@@ -7,5 +7,5 @@ import { PostShort } from "../../../types/post-types";
     styleUrls: ['./postItem.component.css']
 })
 export class PostItemComponent {
-    @Input() postItem: PostShort;
+    @Input() postItem: Post;
 }

@@ -1,10 +1,10 @@
-<a [routerLink]="['/posts', postItem.id]">
+<a [routerLink]="['/posts', postItem._id]">
     <div class="post-item">
         <p class="post-title">{{ postItem.title }}</p>
         <div class="post-subcontainer">
             <p class="post-date">{{ postItem.date }}</p>
             <p>~</p>
-            <p *ngFor="let tag of postItem.tags">{{ tag }}</p>
+            <p>{{ postItem.tag }}</p>
         </div>
         <p class="post-description">{{ postItem.description }}</p>
     </div>
