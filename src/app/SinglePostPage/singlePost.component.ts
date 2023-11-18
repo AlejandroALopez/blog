@@ -22,7 +22,6 @@ export class SinglePostComponent implements OnInit {
 
   getPost(): void {
     const postId = this.route.snapshot.paramMap.get('postId');
-    console.log("id got: ", postId);
     if (postId) {
       this.postService.getPostById(postId).subscribe(
         (post) => {

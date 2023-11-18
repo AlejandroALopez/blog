@@ -13,7 +13,6 @@ a {
 
 .post-title {
   font-size: 3rem;
-  text-align: justify;
 }
 
 .post-description {
@@ -24,4 +23,9 @@ a {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  color: gray
+}
+
+.post-readmore {
+  text-align: center;
 }

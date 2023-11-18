@@ -1,0 +1,35 @@
+.post-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    margin: 4rem;
+}
+
+.post-tag {
+    text-align: center;
+    margin-bottom: 0;
+    color: gray;
+}
+
+.post-title {
+    text-align: center;
+}
+
+.post-author {
+    margin: 2rem 12rem;
+    color: gray;
+}
+
+.post-content {
+    margin: 4rem 12rem;
+}
+
+.post-content-item {
+    margin: 4rem 0rem;
+}
+
+.post-paragraph {
+    text-align: justify;
+    font-size: large;
+}
