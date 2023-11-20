@@ -12,6 +12,8 @@ import { PostItemComponent } from './posts/postItem/postItem.component';
 import { AllPostsComponent } from './AllPostsPage/allPosts.component';
 import { HomeComponent } from './homePage/home.component';
 import { SinglePostComponent } from './SinglePostPage/singlePost.component';
+import { CodeSnippetComponent } from './code-snippet/code-snippet.component';
+import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,14 +31,27 @@ const appRoutes: Routes = [
     PostsComponent,
     PostItemComponent,
     FooterComponent,
+    CodeSnippetComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HighlightModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          javascript: () => import('highlight.js/lib/languages/javascript'),
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+        },
+      },
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
