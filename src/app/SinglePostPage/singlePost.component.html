@@ -1,11 +1,19 @@
 <div class="post-container" *ngIf="post">
-    <p class="post-tag">{{ post.tag }}</p>
-    <h2 class="post-title">{{ post.title }}</h2>
-    <h4 class="post-author">Written by: {{ post.author }}</h4>
-    <div class="post-content">
-        <div class="post-content-item" *ngFor="let contentItem of post.content">
-            <p class="post-paragraph" *ngIf="contentItem.type === 'paragraph'">{{ contentItem.data }}</p>
-        </div>
+  <p class="post-tag">{{ post.tag }}</p>
+  <h2 class="post-title">{{ post.title }}</h2>
+  <h4 class="post-author">Written by: {{ post.author }}</h4>
+  <div class="post-content">
+    <div class="post-content-item" *ngFor="let contentItem of post.content">
+      <p class="post-paragraph" *ngIf="contentItem.type === 'paragraph'">
+        {{ contentItem.data }}
+      </p>
+      <img
+        class="post-image"
+        *ngIf="contentItem.type === 'image'"
+        [src]="getImageUrl(contentItem.imageId)"
+        alt="contentItem.imageId"
+      />
+      <app-code-snippet *ngIf="contentItem.type === 'code'" [code]="contentItem.data"></app-code-snippet>
     </div>
-    <app-code-snippet></app-code-snippet>
+  </div>
 </div>
