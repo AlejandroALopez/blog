@@ -1,12 +1,10 @@
 <div>
   <div class="filters-container">
-    <div class="search">
-      <input class="search-bar" placeholder="Search post"/>
-    </div>
+    <h2>All Posts</h2>
     <div class="tags">
       <p>By Tag:</p>
       <div class="tags-container">
-        <button *ngFor="let tag of tags" class="tag">
+        <button *ngFor="let tag of tags" [ngClass]="{'tag': !isTagSelected(tag), 'tag-active': isTagSelected(tag)}" (click)="filterByTag(tag)">
           <p>{{ tag }}</p>
         </button>
       </div>
@@ -14,6 +12,6 @@
   </div>
   <div class="content">
     <h3>Latest Posts</h3>
-    <posts-component></posts-component>
+    <posts-component [posts]="filteredPosts"></posts-component>
   </div>
 </div>

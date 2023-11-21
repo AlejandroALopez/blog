@@ -1,5 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { PostService } from "../post.service";
+import { Component, Input } from "@angular/core";
 import { Post } from "../../types/post-types";
 
 @Component({
@@ -7,23 +6,6 @@ import { Post } from "../../types/post-types";
     templateUrl: './posts.component.html',
     styleUrls: ['./posts.component.css']
 })
-export class PostsComponent implements OnInit {
-    posts: Post[] = [];
-
-    constructor(private postService: PostService) {}
-
-    ngOnInit(): void {
-        this.getPosts();
-    }
-
-    getPosts(): void {
-        this.postService.getAllPosts().subscribe(
-            (posts) => {
-                this.posts = posts;
-            },
-            (error) => {
-                console.error('Error fetching posts: ', error);
-            }
-        );
-    }
+export class PostsComponent {
+    @Input() posts: Post[] = [];
 }
