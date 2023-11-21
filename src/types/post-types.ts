@@ -2,15 +2,6 @@ export interface Test {
   message: string;
 }
 
-export interface PostShort {
-  id: string;
-  title: string;
-  tags: string[];
-  author: string;
-  date: string; // xx/xx/xx format
-  description: string;
-}
-
 export interface Post {
   _id?: string;
   title: string;
@@ -18,7 +9,7 @@ export interface Post {
   author: string;
   date: string;
   description: string;
-  content: {
+  content?: {
     type: string;
     data?: string;
     imageUrl?: string;
