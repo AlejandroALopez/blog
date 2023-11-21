@@ -12,8 +12,9 @@ import { PostItemComponent } from './posts/postItem/postItem.component';
 import { AllPostsComponent } from './AllPostsPage/allPosts.component';
 import { HomeComponent } from './homePage/home.component';
 import { SinglePostComponent } from './SinglePostPage/singlePost.component';
-import { CodeSnippetComponent } from './code-snippet/code-snippet.component';
+import { CodeSnippetComponent } from './SinglePostPage/code-snippet/code-snippet.component';
 import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
+import { ColoredBoxComponent } from './SinglePostPage/colored-box/colored-box.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
     PostItemComponent,
     FooterComponent,
     CodeSnippetComponent,
+    ColoredBoxComponent,
   ],
   imports: [
     BrowserModule,

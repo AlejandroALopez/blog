@@ -13,7 +13,14 @@
         [src]="getImageUrl(contentItem.imageId)"
         alt="contentItem.imageId"
       />
-      <app-code-snippet *ngIf="contentItem.type === 'code'" [code]="contentItem.data"></app-code-snippet>
+      <app-code-snippet
+        *ngIf="contentItem.type === 'code'"
+        [code]="contentItem.data"
+      ></app-code-snippet>
+      <app-colored-box
+        *ngIf="contentItem.type === 'coloredBox'"
+        [data]="contentItem.data"
+      ></app-colored-box>
     </div>
   </div>
 </div>

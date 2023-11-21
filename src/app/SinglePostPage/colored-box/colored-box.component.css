@@ -1,0 +1,11 @@
+.colored-box-container {
+    background-color: rgb(54, 54, 216);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 0rem 16rem;
+
+    p {
+        font-size: 1.5em;
+        color: white;
+    }
+}
