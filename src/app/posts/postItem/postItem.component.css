@@ -6,9 +6,9 @@ a {
 .post-item {
   border: 3px solid #858585;
   border-radius: 20px;
-  width: 40rem;
-  height: 25rem;
-  padding: 1rem;
+  width: 50rem;
+  height: 30rem;
+  padding: 2rem;
 }
 
 .post-title {

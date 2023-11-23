@@ -1,11 +1,25 @@
-.content {
-    margin: 4rem;
-}
-
 .welcome {
+    margin: 4rem;
     text-align: center;
 }
 
+.welcome-title {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+}
+
 .welcome-text {
+    margin: 2rem 20rem;
     font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+    span {
+        font-weight: 600; 
+        color: #7126D9;
+    }
+}
+
+.content {
+    margin: 4rem;
 }
