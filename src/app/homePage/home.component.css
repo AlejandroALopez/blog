@@ -23,3 +23,8 @@
 .content {
     margin: 4rem;
 }
+
+.subtitle {
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+}

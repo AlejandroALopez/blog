@@ -4,28 +4,44 @@ a {
 }
 
 .post-item {
-  border: 3px solid #858585;
+  background-color: white;
   border-radius: 20px;
   width: 50rem;
   height: 30rem;
   padding: 2rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .post-title {
   font-size: 3rem;
-}
-
-.post-description {
-  text-align: justify;
+  font-family: 'Exo', sans-serif;
+  font-weight: 600;
 }
 
 .post-subcontainer {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  color: gray
+  color: gray;
+  font-family: 'IBM Plex Mono', monospace;
+  font-family: 400;
+}
+
+.post-tag {
+  font-family: 500;
+  color: #2662D9;
+}
+
+.post-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: justify;
 }
 
 .post-readmore {
+  font-family: 'IBM Plex Mono', monospace;
+  font-family: 400;
   text-align: center;
 }
