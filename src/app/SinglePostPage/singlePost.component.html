@@ -1,6 +1,6 @@
 <div class="post-container" *ngIf="post">
   <p class="post-tag">{{ post.tag }}</p>
-  <h2 class="post-title">{{ post.title }}</h2>
+  <h1 class="post-title">{{ post.title }}</h1>
   <h4 class="post-author">Written by: {{ post.author }}</h4>
   <div class="post-content">
     <div class="post-content-item" *ngFor="let contentItem of post.content">
