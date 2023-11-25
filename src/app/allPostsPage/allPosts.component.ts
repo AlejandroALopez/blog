@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { tags } from '../../data/tags';
 import { Post } from '../../types/post-types';
-import { PostService } from '../post.service';
+import { PostService } from '../services/post.service';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'all-posts-page',
@@ -14,7 +15,18 @@ export class AllPostsComponent implements OnInit {
   tags: string[] = tags;
   selectedTag: string | null = null;
 
-  constructor(private postService: PostService) {}
+  constructor(
+    private postService: PostService,
+    private themeService: ThemeService
+  ) {}
+
+  get isDarkMode(): boolean {
+    return this.themeService.isDarkMode;
+  }
+
+  get numResults(): number {
+    return this.filteredPosts.length;
+  }
 
   ngOnInit(): void {
     this.loadAllPosts();
