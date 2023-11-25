@@ -30,6 +30,12 @@ a {
     font-weight: 500;
     margin: 0;
     color: white;
+    transition: transform 0.2s ease, color 0.2s ease,
+}
+
+.header-option:hover {
+    transform: scale(1.05);
+    color: #7126D9;
 }
 
 .line {
