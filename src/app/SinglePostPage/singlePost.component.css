@@ -1,52 +1,64 @@
 .post-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 2rem;
+  margin: 4rem;
 }
 
 .post-tag {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 0;
-    color: gray;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0;
+  color: gray;
 }
 
 .post-title {
-    font-family: 'Exo', sans-serif;
-    font-weight: 600;
-    text-align: center;
+  font-family: "Exo", sans-serif;
+  font-weight: 600;
+  text-align: center;
 }
 
 .post-author {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    margin: 2rem 12rem;
-    color: gray;
-    text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin: 2rem 12rem;
+  color: gray;
+  text-align: center;
 }
 
 .post-content {
-    margin: 0rem 16rem;
+  margin: 0rem 16rem;
 }
 
 .post-content-item {
-    display: flex;
-    justify-content: center;
-    margin: 4rem 0rem;
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0rem;
+}
+
+.post-content-item.subtitle {
+    justify-content:left;
+    text-align: left;
 }
 
 .post-paragraph {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    text-align: justify;
-    font-size: large;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: justify;
+  font-size: large;
+}
+
+.post-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: x-large;
 }
 
 .post-image {
-    width: 50rem;
-    height: auto;
+  display: flex;
+  width: 50rem;
+  height: auto;
 }
