@@ -1,3 +1,3 @@
 export const tags: string[] = [
-    "React", "Angular", "CSS"
+    "React", "Angular", "CSS", "Portfolio"
 ]
