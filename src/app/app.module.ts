@@ -15,11 +15,13 @@ import { SinglePostComponent } from './SinglePostPage/singlePost.component';
 import { CodeSnippetComponent } from './SinglePostPage/code-snippet/code-snippet.component';
 import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
 import { ColoredBoxComponent } from './SinglePostPage/colored-box/colored-box.component';
+import { PortfolioComponent } from './PortfolioPage/portfolio.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'posts', component: AllPostsComponent },
   { path: 'posts/:postId', component: SinglePostComponent },
+  { path: 'portfolio', component: PortfolioComponent },
 ];
 
 @NgModule({
@@ -31,6 +33,7 @@ const appRoutes: Routes = [
     SinglePostComponent,
     PostsComponent,
     PostItemComponent,
+    PortfolioComponent,
     FooterComponent,
     CodeSnippetComponent,
     ColoredBoxComponent,

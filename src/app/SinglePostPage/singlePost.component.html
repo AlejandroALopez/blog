@@ -1,5 +1,5 @@
 <div class="post-container" *ngIf="post">
-  <a class="back-button" routerLink="..">&lt; Go Back</a>
+  <a class="back-button" (click)="goBack()">&lt; Go Back</a>
   <p class="post-tag">{{ post.tag }}</p>
   <h1 class="post-title">{{ post.title }}</h1>
   <h4 class="post-author">Written by: {{ post.author }}</h4>

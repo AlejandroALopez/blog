@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from '../../types/post-types';
 import { PostService } from '../services/post.service';
@@ -13,11 +14,16 @@ export class SinglePostComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private postService: PostService
+    private postService: PostService,
+    private _location: Location
   ) {}
 
   ngOnInit(): void {
     this.getPost();
+  }
+
+  goBack() {
+    this._location.back();
   }
 
   getPost(): void {

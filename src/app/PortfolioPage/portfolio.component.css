@@ -1,0 +1,24 @@
+.header-container {
+  margin: 4rem;
+
+  h2 {
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+  }
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
+
+.content {
+  margin: 4rem;
+}
+
+.subtitle {
+  font-family: "Exo", sans-serif;
+  font-weight: 500;
+}
