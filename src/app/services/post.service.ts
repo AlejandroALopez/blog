@@ -9,6 +9,7 @@ import { API_URL } from '../../data/constants';
 })
 export class PostService {
   private apiUrl = `${API_URL}/posts`;
+  // private apiUrl = 'http://localhost:8080/posts';
 
   constructor(private http: HttpClient) { }
 

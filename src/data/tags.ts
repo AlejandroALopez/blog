@@ -1,3 +1,1 @@
-export const tags: string[] = [
-    "React", "Angular", "CSS", "Portfolio"
-]
+export const tags: string[] = ['Portfolio', 'CSS'];
