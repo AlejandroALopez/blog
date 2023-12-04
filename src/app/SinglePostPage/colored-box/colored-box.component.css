@@ -1,0 +1,13 @@
+.colored-box-container {
+    background-color: rgb(54, 54, 216);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 0rem 8rem;
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 1.5em;
+        color: white;
+    }
+}

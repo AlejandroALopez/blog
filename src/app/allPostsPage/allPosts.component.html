@@ -1,0 +1,27 @@
+<div>
+  <div class="filters-container">
+    <h2>All Posts</h2>
+    <div class="tags">
+      <h4 class="by-tag">By Tag:</h4>
+      <div class="tags-container">
+        <button
+          *ngFor="let tag of tags"
+          [ngClass]="{
+            tag: !isTagSelected(tag),
+            'tag-active': isTagSelected(tag)
+          }"
+          [class.dark-mode]="isDarkMode"
+          (click)="filterByTag(tag)"
+        >
+          <p class="tag-text">{{ tag }}</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <h3 class="subtitle">
+      {{ numResults }} {{ numResults === 1 ? "result" : "results" }}
+    </h3>
+    <posts-component [posts]="filteredPosts"></posts-component>
+  </div>
+</div>

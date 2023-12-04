@@ -1,0 +1,29 @@
+<div class="post-container" *ngIf="post">
+  <p class="post-tag">{{ post.tag }}</p>
+  <h1 class="post-title">{{ post.title }}</h1>
+  <h4 class="post-author">Written by: {{ post.author }}</h4>
+  <div class="post-content">
+    <div class="post-content-item" *ngFor="let contentItem of post.content" [class.subtitle]="contentItem.type === 'subtitle'">
+      <p class="post-paragraph" *ngIf="contentItem.type === 'paragraph'">
+        {{ contentItem.data }}
+      </p>
+      <h2 class="post-subtitle" *ngIf="contentItem.type === 'subtitle'">
+        {{ contentItem.data }}
+      </h2>
+      <img
+        class="post-image"
+        *ngIf="contentItem.type === 'image'"
+        [src]="getImageUrl(contentItem.imageId)"
+        alt="contentItem.imageId"
+      />
+      <app-code-snippet
+        *ngIf="contentItem.type === 'code'"
+        [code]="contentItem.data"
+      ></app-code-snippet>
+      <app-colored-box
+        *ngIf="contentItem.type === 'coloredBox'"
+        [data]="contentItem.data"
+      ></app-colored-box>
+    </div>
+  </div>
+</div>

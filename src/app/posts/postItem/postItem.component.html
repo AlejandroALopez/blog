@@ -1,0 +1,12 @@
+<a [routerLink]="['/posts', postItem._id]">
+  <div class="post-item" [class.dark-mode]="isDarkMode">
+    <p class="post-title">{{ postItem.title }}</p>
+    <div class="post-subcontainer">
+      <p class="post-date">{{ postItem.date }}</p>
+      <p>~</p>
+      <p class="post-tag" [class.dark-mode]="isDarkMode">{{ postItem.tag }}</p>
+    </div>
+    <p class="post-description">{{ postItem.description }}</p>
+    <p class="post-readmore">Read more</p>
+  </div>
+</a>
