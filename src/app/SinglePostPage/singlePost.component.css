@@ -59,6 +59,6 @@
 
 .post-image {
   display: flex;
-  width: 50rem;
+  max-width: 60rem;
   height: auto;
 }
