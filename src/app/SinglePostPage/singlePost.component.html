@@ -15,6 +15,13 @@
       <h2 class="post-subtitle" *ngIf="contentItem.type === 'subtitle'">
         {{ contentItem.data }}
       </h2>
+      <a
+        class="post-paragraph"
+        *ngIf="contentItem.type === 'link'"
+        [href]="contentItem.data"
+        target="_blank"
+        >Project link</a
+      >
       <img
         class="post-image"
         *ngIf="contentItem.type === 'image'"
