@@ -1,0 +1,85 @@
+.aboutme-container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 8rem;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  font-family: "Exo", sans-serif;
+  font-weight: 600;
+}
+
+.aboutme-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+  margin-bottom: 5em;
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: larger;
+  }
+}
+
+.field-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+
+  font-family: "Exo", sans-serif;
+  font-weight: 600;
+}
+
+.field-content {
+  margin-left: 8em;
+  font-size: larger;
+
+  h3,
+  li {
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+  }
+
+  p {
+    font-family: "Exo", sans-serif;
+    font-weight: 400;
+  }
+}
+
+.ulist {
+  margin-left: 6em;
+}
+
+.subtitle {
+  font-family: "Exo", sans-serif;
+  font-weight: 600;
+}
+
+.photo {
+  width: 30rem;
+  height: 40rem;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .top-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field-content,
+  .ulist {
+    margin: 1em 0em;
+  }
+}
