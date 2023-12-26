@@ -1,6 +1,11 @@
 <div class="header">
-    <div class="row">
-        <a routerLink="/"><h3 class="header-title">Alejandro Lopez</h3></a>
+    <div class="nav-links">
+        <div class="top-row">
+            <a routerLink="/"><h3 class="header-title">Alejandro Lopez</h3></a>
+            <button class="toggle-button-phone" (click)="toggleTheme()">
+                <img [src]="isDarkTheme() ? 'assets/icons/moon.svg' : 'assets/icons/sun.svg'" alt="theme toggle"/>
+            </button>
+        </div>
         <div class="line"></div>
         <a routerLink="/posts"><h4 class="header-option">All Posts</h4></a>
         <a routerLink="/portfolio"><h4 class="header-option">Portfolio</h4></a>
